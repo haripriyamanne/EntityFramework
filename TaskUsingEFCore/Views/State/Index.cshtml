@@ -1,0 +1,48 @@
+﻿@model IEnumerable<TaskUsingEFCore.Models.State>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<a asp-action="Create"><strong>Create State</strong></a>
+<div></div>
+<div class="container row">
+    <div class="col-1 text-secondary">
+        @Html.DisplayNameFor(model => model.CountryId)
+    </div>
+    <div class="col-1 text-secondary">
+        @Html.DisplayNameFor(model => model.StateId)
+    </div>
+    <div class="col-6 text-secondary">
+        @Html.DisplayNameFor(model => model.StateName)
+    </div>
+    <div class="col-12">
+        @foreach (var item in Model)
+        {
+        <div class="container row">
+            <div class="col-1">
+                @Html.DisplayFor(model => item.CountryId)
+            </div>
+            <div class="col-1">
+                @Html.DisplayFor(model => item.StateId)
+            </div>
+            <div class="col-3">
+                @Html.DisplayFor(model => item.StateName)
+            </div>
+            <div class="col-1">
+                <a asp-action="Edit" asp-route-id="@item.StateId">Edit</a>
+            </div>
+            <div class="col-1">
+                <a asp-action="Details" asp-route-id="@item.StateId"> Details </a>
+            </div>
+            <div class="col-1">
+                <a asp-action="Delete" asp-route-id="@item.StateId"> Delete </a>
+            </div>
+        </div>
+
+        }
+    </div>
+</div>
+

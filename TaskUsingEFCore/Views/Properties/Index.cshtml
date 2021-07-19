@@ -1,0 +1,131 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model TaskUsingEFCore.Models.PersonProperty;
+
+<form method="post" asp-action="Index" asp-controller="Properties">
+
+
+   <div asp-validation-summary="ModelOnly"> </div>
+    <h1>Person Details</h1>
+    <div class="form-group row">
+
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="PersonEmail" class="control-label"></label>
+        </div>
+        <div class="col-12">
+            <input asp-for="PersonEmail" class="form-control" />
+            <span asp-validation-for="PersonEmail" class="text-denger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="PersonPhoneNumber" class="control-label"></label>
+        </div>
+        <div class="col-12">
+            <input asp-for="PersonPhoneNumber" class="form-control" />
+            <span asp-validation-for="PersonPhoneNumber" class="text-denger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="PersonPlan" class="control-label"></label>
+        </div>
+        <div class="col-12">
+            <input asp-for="PersonPlan" class="form-control" />
+            <span asp-validation-for="PersonPlan" class="text-denger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="PersonBillingIntervel" class="control-label"></label>
+        </div>
+        <div class="col-6">
+            <select asp-for="PersonBillingIntervel">
+                <option value="">hello</option>
+                <option value="1">Monthly</option>
+                <option value="2">HalfYearly</option>
+                <option value="3">Yearly</option>
+            </select>
+        </div>
+
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <div class="col-12">
+                <label asp-for="PersonCountry" class="control-label"></label>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="col-12">
+                <label asp-for="PersonState" class="control-label"></label>
+            </div>
+
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <div class="col-12">
+                <label asp-for="PersonCity" class="control-label"></label>
+            </div>
+
+        </div>
+        <div class="col-6">
+            <div class="col-6">
+                <label asp-for="PersonPostalCode" class="control-label"></label>
+            </div>
+            <div class="col-12">
+                <input asp-for="PersonPostalCode" class="form-control" placeholder="PostalCode" />
+                <span asp-validation-for="PersonPostalCode" class="text-denger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row">
+
+        <div class="col-6">
+            <label asp-for="PersonStreetAddress" class="control-label"></label>
+        </div>
+        <div class="col-12">
+            <input asp-for="PersonStreetAddress" class="form-control" />
+            <span asp-validation-for="PersonStreetAddress" class="text-denger"></span>
+        </div>
+
+    </div>
+    <div class="form-group row">
+
+    </div>
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="PersonOldPassword" class="control-label"></label>
+        </div>
+        <div class="col-12">
+            <input asp-for="PersonOldPassword" class="form-control" />
+            <span asp-validation-for="PersonOldPassword" class="text-denger"></span>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-6">
+            <label asp-for="PersonNewPassword" class="control-label"></label>
+        </div>
+        <div class="col-12">
+            <input asp-for="PersonNewPassword" class="form-control" />
+            <span asp-validation-for="PersonNewPassword" class="text-denger"></span>
+        </div>
+    </div>
+    <div class="form-group row">
+        <div class="col-9"></div>
+        <div>
+            <input type="submit" value="Submit" class="btn btn-success" />
+        </div>
+    </div>
+
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

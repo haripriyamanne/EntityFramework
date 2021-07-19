@@ -1,0 +1,86 @@
+﻿@model TaskUsingEFCore.Models.PersonProperty
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>PersonProperty</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PersonName" class="control-label"></label>
+                <input asp-for="PersonName" class="form-control" />
+                <span asp-validation-for="PersonName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonEmail" class="control-label"></label>
+                <input asp-for="PersonEmail" class="form-control" />
+                <span asp-validation-for="PersonEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonPlan" class="control-label"></label>
+                <input asp-for="PersonPlan" class="form-control" />
+                <span asp-validation-for="PersonPlan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonBillingIntervel" class="control-label"></label>
+                <input asp-for="PersonBillingIntervel" class="form-control" />
+                <span asp-validation-for="PersonBillingIntervel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonStreetAddress" class="control-label"></label>
+                <input asp-for="PersonStreetAddress" class="form-control" />
+                <span asp-validation-for="PersonStreetAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonCity" class="control-label"></label>
+                <input asp-for="PersonCity" class="form-control" />
+                <span asp-validation-for="PersonCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonPhoneNumber" class="control-label"></label>
+                <input asp-for="PersonPhoneNumber" class="form-control" />
+                <span asp-validation-for="PersonPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonState" class="control-label"></label>
+                <input asp-for="PersonState" class="form-control" />
+                <span asp-validation-for="PersonState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonPostalCode" class="control-label"></label>
+                <input asp-for="PersonPostalCode" class="form-control" />
+                <span asp-validation-for="PersonPostalCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonCountry" class="control-label"></label>
+                <input asp-for="PersonCountry" class="form-control" />
+                <span asp-validation-for="PersonCountry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonOldPassword" class="control-label"></label>
+                <input asp-for="PersonOldPassword" class="form-control" />
+                <span asp-validation-for="PersonOldPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonNewPassword" class="control-label"></label>
+                <input asp-for="PersonNewPassword" class="form-control" />
+                <span asp-validation-for="PersonNewPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

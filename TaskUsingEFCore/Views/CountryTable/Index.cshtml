@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TaskUsingEFCore.Models.CountryTable>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<a asp-action="Create"><strong>Create Country</strong></a>
+<div></div>
+<div class="container row">
+
+    <div class="col-1 text-secondary">
+        @Html.DisplayNameFor(model => model.CountryId)
+    </div>
+    <div class="col-6 text-secondary">
+        @Html.DisplayNameFor(model => model.CountryName)
+    </div>
+    <div class="col-12">
+        @foreach (var item in Model)
+        {
+            <div class="container row">
+                <div class="col-1">
+                    @Html.DisplayFor(model => item.CountryId)
+                </div>
+                <div class="col-3">
+                    @Html.DisplayFor(model => item.CountryName)
+                </div>
+                <div class="col-1">
+                    <a asp-action="Edit" asp-route-id="@item.CountryId">Edit</a>
+                </div>
+                <div class="col-1">
+                    <a asp-action="Details" asp-route-id="@item.CountryId"> Details </a>
+                </div>
+                <div class="col-1">
+                    <a asp-action="Delete" asp-route-id="@item.CountryId"> Delete </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+<div>
+    <a asp-action="Demo">Demo</a>
+</div>
+
